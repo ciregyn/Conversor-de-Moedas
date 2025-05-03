@@ -27,7 +27,7 @@ O projeto conta com um sistema simples de conversão, onde o usuário pode:
 
 O layout se adapta automaticamente para dispositivos móveis e desktops, garantindo que a experiência do usuário seja sempre boa.
 
-Para conferir entre no link https://ciregyn.github.io/Exercio-Conversor/
+
 
 
 <img src= "https://github.com/ciregyn/Conversor-de-Moedas/blob/main/assets/Print.jpg?raw=true">
