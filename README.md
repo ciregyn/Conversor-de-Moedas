@@ -1,33 +1,34 @@
-<h1>Conversor de moedas</h1>
+# 💱 Conversor de Moedas - PURIM DIGITAL
 
-Hoje, estou animado para compartilhar com vocês um projeto simples, mas extremamente útil: um conversor de moedas que criei usando HTML, CSS e JavaScript! 💻🌍.
+Este é um projeto simples e funcional de um **Conversor de Moedas**, feito com **HTML**, **CSS** e **JavaScript** puro. Ele permite converter valores entre moedas como **Real**, **Dólar**, **Euro**, **Libra** e **Bitcoin**, com imagens e nomes dinâmicos.
 
-Colocando em pratica o que aprendi nas aulas do DevClub.
+![Interface do Conversor](./assets/Print.jpg) <!-- Substitua pelo nome da sua imagem de interface -->
 
-<h2>Tecnologias Utilizadas:</h2>
+---
 
- --HTML: Para estruturar o conteúdo da página e criar os campos de entrada, seleção de moedas e botão de conversão.
+## 🚀 Funcionalidades
 
- --CSS: Utilizei CSS para criar um design responsivo e moderno, com um fundo interativo e animações suaves para proporcionar uma experiência de usuário mais agradável.
+- Conversão entre 5 moedas (BRL, USD, EUR, GBP, BTC)
+- Interface moderna e responsiva
+- Exibição de imagens e nomes das moedas envolvidas
+- Alerta de erro para valores inválidos
+- Animações suaves e layout intuitivo
 
- --JavaScript: A lógica por trás da conversão de moedas foi implementada em JavaScript, permitindo que o usuário insira um valor em uma moeda, escolha de qual moeda 
-ele quer converter e veja o valor convertido em outra moeda instantaneamente.
+---
 
-<h2>Funcionamento:</h2>
+## 🧠 Como funciona
 
-O projeto conta com um sistema simples de conversão, onde o usuário pode:
+O código usa taxas de câmbio simuladas e realiza as seguintes etapas:
 
- --Selecionar a moeda de origem (Real, Dólar, Euro, etc.).
+1. Captura o valor digitado e as moedas escolhidas nos menus.
+2. Aplica a taxa de conversão com base em uma matriz fixa.
+3. Exibe o valor convertido com formatação correta e o nome/imagem das moedas.
+4. Alerta o usuário caso insira um valor inválido.
 
- --Selecionar a moeda de destino.
+### Exemplo da lógica principal:
 
- --Inserir um valor e pressionar o botão "Converter".
-
- 
-
-O layout se adapta automaticamente para dispositivos móveis e desktops, garantindo que a experiência do usuário seja sempre boa.
-
-
-
-
-<img src= "https://github.com/ciregyn/Conversor-de-Moedas/blob/main/assets/Print.jpg?raw=true">
+```js
+if (moedaOrigem !== moedaDestino) {
+    taxa = taxas[moedaOrigem][moedaDestino];
+}
+const convertido = valor * taxa;
